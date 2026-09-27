@@ -1,0 +1,27 @@
+name: prototype-spec-exporter
+description: Generates developer handoff documentation including screen dimension specs, token variable maps, and animation guidelines.
+parameters:
+  type: object
+  properties:
+    module_name:
+      type: string
+      description: Name of the society module (e.g., 'Leaderboard', 'TeamFinder', 'CommunityChat').
+    screens_included:
+      type: array
+      items:
+        type: string
+      description: List of screen names packaged in the specification.
+    target_framework:
+      type: string
+      enum:
+        - flutter
+        - react_native
+      default: flutter
+      description: Target mobile development framework for code token generation.
+    include_svg_manifest:
+      type: boolean
+      default: true
+      description: Include export paths for vector icons and graphics.
+  required:
+    - module_name
+    - screens_included

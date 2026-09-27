@@ -1,5 +1,12 @@
 <img src="Banner/AppCosmos.png" width="800" />
 
+<p align="left">
+  <a href="agent.yaml"><img src="https://img.shields.io/badge/OpenGAP-0.1.0-blue.svg" alt="OpenGAP Spec"></a>
+  <a href="https://app.hidevs.xyz/passport/submit"><img src="https://img.shields.io/badge/GitAgent%20Passport-Ready-green.svg" alt="GitAgent Passport Ready"></a>
+  <a href="agent.yaml"><img src="https://img.shields.io/badge/Category-Education-purple.svg" alt="Category Education"></a>
+  <a href="EXPLAINABILITY.md"><img src="https://img.shields.io/badge/Compliance-FERPA%20%7C%20GDPR-orange.svg" alt="Compliance FERPA | GDPR"></a>
+</p>
+
 
 ### **Where innovative ideas orbit into powerful apps.**
 
@@ -33,8 +40,30 @@ Please follow the below guidelines while contributing to this project:
 5. Once you are confident in your work, create a pull request to the `main` branch of the upstream repository with proper descriptions explaining what you did and wait until we review it.
 6. Read [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
-> Check out GitHub Flow for more details.
-> 
+---
+
+## 🤖 GitAgent Passport Qualification
+
+This repository is compliant with the **OpenGAP Spec 0.1.0** standard and qualified for the [HiDevs GitAgent Passport](https://app.hidevs.xyz/passport/submit).
+
+### Clearance Checkpoints Summary
+
+| Checkpoint | Status | Focus Area | Artifact |
+| :--- | :--- | :--- | :--- |
+| **Checkpoint 1: Validate** | `PASSED` | Schema, Soul, Skills, Tools | [`agent.yaml`](agent.yaml), [`SOUL.md`](SOUL.md), [`skills/`](skills/), [`tools/`](tools/) |
+| **Checkpoint 2: Explain** | `PASSED` | Decision Logic, Data Usage, Limitations | [`EXPLAINABILITY.md`](EXPLAINABILITY.md) |
+| **Checkpoint 3: Export** | `PASSED` | Interoperability & Tool Schemas | [`tools/`](tools/), [`RULES.md`](RULES.md), [`DUTIES.md`](DUTIES.md) |
+
+### Agent Architecture Overview
+
+- **Identity & Ethics**: [`SOUL.md`](SOUL.md) defines core behavioral traits, mobile product architecture principles, user-centered design ethos, and inclusive accessibility advocacy.
+- **Operational Rules**: [`RULES.md`](RULES.md) establishes absolute constraints on mobile ergonomics (touch targets $\ge 44\text{pt}$), WCAG 2.1 AA contrast compliance, GeekHaven design tokens, and FERPA/GDPR student privacy.
+- **Role Duties**: [`DUTIES.md`](DUTIES.md) defines step-by-step responsibilities across user journey mapping, wireframe validation, design system token auditing, and developer handoff packaging.
+- **Transparent Reasoning**: [`EXPLAINABILITY.md`](EXPLAINABILITY.md) documents step-by-step rationale, mobile UX scoring formulas, Laws of UX rubrics, and operational boundaries.
+- **Modular Skills**: Located in [`skills/`](skills/) for user flow architecture, design system auditing, wireframe validation, and high-fidelity prototyping.
+- **Tool Schemas**: Standardized JSON schemas located in [`tools/`](tools/) for flow transition checking, design token inspection, accessibility auditing, and developer spec export.
+
+---
 
 ## Quick Resources:
 

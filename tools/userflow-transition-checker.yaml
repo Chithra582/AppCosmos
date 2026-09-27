@@ -1,0 +1,38 @@
+name: userflow-transition-checker
+description: Traverses user journeys between mobile screens, detects dead-end views, and audits back-navigation accessibility.
+parameters:
+  type: object
+  properties:
+    flow_id:
+      type: string
+      description: Name or ID of the user journey (e.g., 'auth_onboarding', 'community_chat').
+    screens:
+      type: array
+      items:
+        type: object
+        properties:
+          screen_id:
+            type: string
+          screen_title:
+            type: string
+          outgoing_transitions:
+            type: array
+            items:
+              type: object
+              properties:
+                trigger_action:
+                  type: string
+                destination_screen_id:
+                  type: string
+              required:
+                - trigger_action
+                - destination_screen_id
+          has_back_navigation:
+            type: boolean
+        required:
+          - screen_id
+          - outgoing_transitions
+      description: List of screen nodes and their transitions.
+  required:
+    - flow_id
+    - screens

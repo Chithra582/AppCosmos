@@ -1,0 +1,42 @@
+name: design-token-inspector
+description: Inspects Figma layers to check compliance with GeekHaven color variables, typography scales, and component library linkage.
+parameters:
+  type: object
+  properties:
+    screen_name:
+      type: string
+      description: Name of the screen frame under inspection.
+    layers:
+      type: array
+      items:
+        type: object
+        properties:
+          layer_name:
+            type: string
+          layer_type:
+            type: string
+            enum:
+              - text
+              - shape
+              - component_instance
+              - frame
+          fill_color:
+            type: string
+          font_size:
+            type: integer
+          linked_token_name:
+            type: string
+        required:
+          - layer_name
+          - layer_type
+      description: Array of layers extracted from the design frame.
+    target_theme:
+      type: string
+      enum:
+        - light
+        - dark
+      default: dark
+      description: Active theme context for token validation.
+  required:
+    - screen_name
+    - layers

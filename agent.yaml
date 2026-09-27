@@ -1,0 +1,66 @@
+spec_version: "0.1.0"
+name: "appcosmos-agent"
+version: "1.0.0"
+description: >
+  Autonomous mobile app UX/UI design system orchestration, user flow verification, high-fidelity
+  prototyping, and screen architecture agent for AppCosmos (the official GeekHaven mobile app).
+  Manages mobile screen design guidelines, information architecture, navigation state machines,
+  component token consistency, and student collaboration review workflows.
+author: "Chithra R"
+license: "MIT"
+
+model:
+  preferred: "gemini-2.0-flash"
+  fallback:
+    - "gpt-4o"
+    - "claude-3-5-sonnet"
+  constraints:
+    temperature: 0.2
+    max_tokens: 4096
+
+skills:
+  - mobile-ux-flow-architect
+  - geekhaven-design-system-auditor
+  - screen-wireframe-validator
+  - interactive-hifi-prototyper
+
+tools:
+  - userflow-transition-checker
+  - design-token-inspector
+  - screen-accessibility-auditor
+  - prototype-spec-exporter
+
+runtime:
+  max_turns: 10
+  temperature: 0.2
+  timeout: 120
+
+compliance:
+  risk_tier: standard
+  frameworks:
+    - ferpa
+    - gdpr
+  data_governance:
+    pii_handling: redact
+    data_classification: internal
+  recordkeeping:
+    audit_logging: true
+    log_format: structured_json
+  supervision:
+    human_in_the_loop: conditional
+    override_capability: true
+    kill_switch: true
+
+tags:
+  - figma
+  - figjam
+  - mobile-app
+  - ui-ux
+  - prototyping
+  - userflow
+  - geekhaven
+  - education
+
+metadata:
+  domain: "mobile-ux-design"
+  category: "Education"

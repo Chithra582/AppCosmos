@@ -1,0 +1,46 @@
+name: screen-accessibility-auditor
+description: Audits mobile screen layouts for minimum 44x44pt touch target compliance, text contrast ratios, and thumb-zone ergonomics.
+parameters:
+  type: object
+  properties:
+    screen_name:
+      type: string
+      description: Name of the screen being audited.
+    interactive_elements:
+      type: array
+      items:
+        type: object
+        properties:
+          element_id:
+            type: string
+          element_type:
+            type: string
+            enum:
+              - button
+              - icon_button
+              - text_link
+              - tab_item
+              - input_field
+          width_pt:
+            type: number
+          height_pt:
+            type: number
+          foreground_color:
+            type: string
+          background_color:
+            type: string
+          y_position_pt:
+            type: number
+        required:
+          - element_id
+          - element_type
+          - width_pt
+          - height_pt
+      description: Interactive controls on the screen.
+    viewport_height_pt:
+      type: number
+      default: 844
+      description: Height of the target device viewport in points.
+  required:
+    - screen_name
+    - interactive_elements
